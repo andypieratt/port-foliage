@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div>
       <header>
-        <h1>Welcome to My Portfolio!</h1>
+        <h1>Portfolio: Andrew Pieratt</h1>
       </header>
 
       <h2>About Me:</h2>
