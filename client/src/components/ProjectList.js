@@ -1,5 +1,9 @@
+import React from "react";
+import Projects from "./pages/Projects";
+
 const projectList = [
   {
+    id: 1,
     name: {
       title: "Almost-FAIM-ous",
     },
@@ -13,8 +17,10 @@ const projectList = [
       github: "https://github.com/andypieratt/Almost-FAIM-ous",
       deployed: "https://almost-faim-ous.herokuapp.com/",
     },
+    image: "",
   },
   {
+    id: 2,
     name: {
       title: "Ultimate Fan App",
     },
@@ -30,5 +36,3 @@ const projectList = [
     },
   },
 ];
-
-export default projectList;
