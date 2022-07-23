@@ -2,6 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import { Github } from "@emotion-icons/bootstrap/Github";
 
 const projectList = [
   {
@@ -43,7 +44,23 @@ export default function Projects(props) {
             <Card.Img variant="top" src={data.image} />
             <Card.Body>
               <Card.Title>{data.title}</Card.Title>
+              <Card.Text>Technologies Used: {data.technologies}</Card.Text>
+              <Card.Text>Role: {data.role}</Card.Text>
               <Card.Text>{data.description}</Card.Text>
+              <a href={data.links.github}>
+                <Github size={35} />
+              </a>
+              <br></br>
+              <br></br>
+              <button>
+                <a
+                  href={data.links.deployed}
+                  target="blank"
+                  rel="noopener noreferrer"
+                >
+                  Application Link!
+                </a>
+              </button>
             </Card.Body>
           </Card>
         </Col>
