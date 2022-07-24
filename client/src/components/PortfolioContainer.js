@@ -1,35 +1,19 @@
-import React, { useState } from "react";
-import NavTabs from "./NavTabs.js";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import Contact from "./pages/Contact";
 import Resume from "./pages/Resume";
-import Footer from "./Footer.js";
 
 export default function PortfolioContainer() {
-  const [currentPage, setCurrentPage] = useState("Home");
-  const renderPage = () => {
-    if (currentPage === "Home") {
-      return <Home />;
-    }
-    if (currentPage === "Projects") {
-      return <Projects />;
-    }
-    if (currentPage === "Resume") {
-      return <Resume />;
-    }
-    if (currentPage === "Contact") {
-      return <Contact />;
-    }
-  };
-
-  const handlePageChange = (page) => setCurrentPage(page);
-
   return (
     <>
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      {renderPage()}
-      <Footer />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/projects" element={<Projects />} />
+        <Route exact path="/resume" element={<Resume />} />
+        <Route exact path="/contact" element={<Contact />} />
+      </Routes>
     </>
   );
 }

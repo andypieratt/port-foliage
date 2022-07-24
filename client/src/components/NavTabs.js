@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const styles = {
   navbar: {
@@ -22,39 +23,24 @@ const styles = {
 
 function NavTabs({ currentPage, handlePageChange }) {
   return (
-    <nav style={styles.navbar}>
-      <a
-        style={styles.a}
-        href="#home"
-        onClick={() => handlePageChange("Home")}
-        className={currentPage === "Home" ? "nav-link active" : "nav-link"}
-      >
-        Home
-      </a>
-      <a
-        style={styles.a}
-        href="#projects"
-        onClick={() => handlePageChange("Projects")}
-        className={currentPage === "Projects" ? "nav-link active" : "nav-link"}
-      >
-        Projects
-      </a>
-      <a
-        style={styles.a}
-        href="#resume"
-        onClick={() => handlePageChange("Resume")}
-        className={currentPage === "Resume" ? "nav-link active" : "nav-link"}
-      >
-        Resume
-      </a>
-      <a
-        style={styles.a}
-        href="#contact"
-        onClick={() => handlePageChange("Contact")}
-        className={currentPage === "Contact" ? "nav-link active" : "nav-link"}
-      >
-        Contact
-      </a>
+    <nav>
+      <div>
+        <h1>Andrew Pieratt</h1>
+      </div>
+      <div>
+        <NavLink exact activeClassName="active" to="/">
+          Home
+        </NavLink>
+        <NavLink exact activeClassName="active" to="/projects">
+          Projects
+        </NavLink>
+        <NavLink exact activeClassName="active" to="/resume">
+          Resume
+        </NavLink>
+        <NavLink exact activeClassName="active" to="/contact">
+          Contact
+        </NavLink>
+      </div>
     </nav>
   );
 }
