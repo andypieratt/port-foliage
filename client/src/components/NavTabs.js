@@ -4,40 +4,55 @@ import { NavLink } from "react-router-dom";
 const styles = {
   navbar: {
     display: "flex",
-    background: "#6a1b9a",
-    height: "80px",
-    width: "auto",
-    alignItems: "center",
-    textAlign: "end",
-  },
-  h1: {
-    textAlign: "left",
-  },
-  a: {
+    width: "100%",
+    padding: "0.5rem",
+    justifyContent: "space-between",
+    backgroundColor: "black",
     color: "white",
-    fontSize: "1.3rem",
+    marginBottom: "2rem",
+  },
+  links: {
+    display: "flex",
+    alignItems: "center",
     textDecoration: "none",
-    padding: "10px",
+    color: "white",
+    padding: ".25rem .5rem",
+    margin: ".25rem",
   },
 };
 
-function NavTabs({ currentPage, handlePageChange }) {
+function NavTabs() {
   return (
-    <nav>
+    <nav style={styles.navbar}>
       <div>
         <h1>Andrew Pieratt</h1>
       </div>
-      <div>
-        <NavLink exact activeClassName="active" to="/">
+      <div style={styles.links}>
+        <NavLink style={styles.links} exact activeClassName="active" to="/">
           Home
         </NavLink>
-        <NavLink exact activeClassName="active" to="/projects">
+        <NavLink
+          style={styles.links}
+          exact
+          activeClassName="active"
+          to="/projects"
+        >
           Projects
         </NavLink>
-        <NavLink exact activeClassName="active" to="/resume">
+        <NavLink
+          style={styles.links}
+          exact
+          activeClassName="active"
+          to="/resume"
+        >
           Resume
         </NavLink>
-        <NavLink exact activeClassName="active" to="/contact">
+        <NavLink
+          style={styles.links}
+          exact
+          activeClassName="active"
+          to="/contact"
+        >
           Contact
         </NavLink>
       </div>

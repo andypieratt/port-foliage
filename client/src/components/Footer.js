@@ -6,7 +6,7 @@ import { Twitter } from "@emotion-icons/bootstrap/Twitter";
 const styles = {
   footer: {
     borderTop: "3px solid black",
-    position: "fixed",
+    // position: "fixed",
     bottom: 0,
     width: "100%",
     display: "flex",
@@ -14,6 +14,7 @@ const styles = {
     justifyContent: "center",
     paddingTop: ".5rem",
     paddingBottom: ".5rem",
+    marginTop: "2rem",
   },
   a: {
     margin: ".25rem",
