@@ -16,7 +16,7 @@ const projectList = [
       github: "https://github.com/andypieratt/Almost-FAIM-ous",
       deployed: "https://almost-faim-ous.herokuapp.com/",
     },
-    image: "./images/almost-faim-ous-main-img.png",
+    image: "./images/faim-main.png",
   },
   {
     id: 2,
@@ -29,11 +29,21 @@ const projectList = [
       github: "https://github.com/andypieratt/project-1",
       deployed: "https://andypieratt.github.io/project-1/",
     },
-    image: "./images/ultimate-fan-app.png",
+    image: "./images/ultimate-fan.svg",
   },
 ];
 
-const styles = {};
+const styles = {
+  margin: {
+    margin: "0.2rem",
+  },
+  img: {
+    display: "flex",
+    width: "677px",
+    height: "300px",
+    justifyContent: "center",
+  },
+};
 
 export default function Projects(props) {
   return (

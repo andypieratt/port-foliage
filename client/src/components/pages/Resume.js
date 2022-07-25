@@ -1,12 +1,21 @@
 import React from "react";
 
+const styles = {
+  alignCenter: {
+    textAlign: "center",
+  },
+  section: {
+    marginLeft: "2rem",
+  },
+};
+
 export default function Resume() {
   return (
     <div>
-      <h1>Resume</h1>
+      <h1 style={styles.alignCenter}>Resume</h1>
       <br></br>
-      <section>
-        <h3>Education</h3>
+      <h3 style={styles.alignCenter}>Education</h3>
+      <section style={styles.section}>
         <br></br>
         <h4>Univeristy of Denver (2022)</h4>
         <h5>
@@ -32,7 +41,7 @@ export default function Resume() {
           <li>Express</li>
         </ul>
       </section>
-      <section>
+      <section style={styles.section}>
         <h4>Univeristy of Colorado, Denver (2017-2021)</h4>
         <h5>Bachelor of Science in Music Business</h5>
         <p>
@@ -47,8 +56,8 @@ export default function Resume() {
         </ul>
       </section>
       <br></br>
-      <section>
-        <h3>Experience</h3>
+      <h3 style={styles.alignCenter}>Experience</h3>
+      <section style={styles.section}>
         <br></br>
         <h4>Bertram Capital Finance (2019-2022)</h4>
         <h5>Floor Manager</h5>
@@ -70,7 +79,8 @@ export default function Resume() {
           </li>
         </ul>
       </section>
-      <section>
+      <section style={styles.section}>
+        <br></br>
         <h4>Outlaw Vintage Co. (2018-Present)</h4>
         <h5>Vintage Curator and Manager</h5>
         <ul>
@@ -84,13 +94,16 @@ export default function Resume() {
             sustainable clothing.
           </li>
         </ul>
+        <br></br>
       </section>
-      <section>
-        <h3>Skills and Interests</h3>
-        <p>
-          Interests: Heavy Metal/Rock drummer, counter-culture enthusiast, and
-          collector and re-seller of vintage clothing and furniture
-        </p>
+      <h3 style={styles.alignCenter}>Skills and Interests</h3>
+      <section style={styles.section}>
+        <br></br>
+        <h5>Interests:</h5>
+        <li>
+          Heavy Metal/Rock drummer, counter-culture enthusiast, and collector
+          and re-seller of vintage clothing and furniture
+        </li>
       </section>
     </div>
   );
